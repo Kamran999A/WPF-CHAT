@@ -124,5 +124,11 @@
   <ItemGroup>
     <Resource Include="AK.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Photos\NeandertalRuslan.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Photos\send.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

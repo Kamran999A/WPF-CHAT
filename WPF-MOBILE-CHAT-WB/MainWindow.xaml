@@ -18,32 +18,32 @@
             <RowDefinition Height="0*"/>
             <RowDefinition Height="285*"  />
         </Grid.RowDefinitions>
-        <StackPanel
-            Background="Transparent"
-            
-            >
-
-            <Border
-                CornerRadius="10,10,0,0"
-                 BorderThickness="3"
-                Background="Transparent" Height="95" HorizontalAlignment="Left" Width="350" Margin="-9,0"
-                >
-                <Image  Source="/Photos/close.png" Width="25" MouseLeftButtonDown="Image_MouseEnter"  Stretch="Uniform" Margin="5,-31,314,31" />
 
 
-            </Border>
-        </StackPanel>
+
+
+        <Image  Source="/Photos/close.png" MouseLeftButtonDown="Image_MouseEnter"   Margin="295,6,8,40" />
+        <Image   Source="/Photos/NeandertalRuslan.jpg" Margin="6,10,259,10" RenderTransformOrigin="4.776,0.321"  />
+        <Label Content="Ruslan Mustafayev &#10;  online" Foreground="Gold"
+               HorizontalAlignment="Left" Height="55" FontSize="18" Margin="78,22,0,0" VerticalAlignment="Top" Width="190">
+            <Label.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0" Opacity="0.5">
+                    <GradientStop Color="Black" Offset="0"/>
+                    <GradientStop Color="#FFC53232" Offset="1"/>
+                </LinearGradientBrush>
+            </Label.Background>
+        </Label>
 
         <StackPanel
             Grid.Row="2" Margin="0,0,0,66"
-            
             >
 
             <Border
+                Grid.Row="1"
                BorderThickness="3"
                 
                 BorderBrush="DarkRed"
-                CornerRadius="20,20,0,0" Height="572"
+                CornerRadius="20,20,0,0" Height="578" HorizontalAlignment="Right" Width="332"
                 >
                 <Border.Background>
                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0" Opacity="0.5">
@@ -53,59 +53,42 @@
                 </Border.Background>
 
 
+                <ListBox Name="ListBoxChat"
+                     Grid.Row="1"
+                        Background="Transparent"
+                     BorderThickness="0"
+                     ScrollViewer.CanContentScroll="False" 
+                         
+                         Margin="0,0,7,67">
+
+                    <ListBox.ItemContainerStyle>
+                        <Style TargetType="{x:Type ListBoxItem}">
+                            <Setter Property="Focusable" Value="False"/>
+                        </Style>
+                    </ListBox.ItemContainerStyle>
 
 
-
-
-                <!--<local:UserControl1 ></local:UserControl1>-->
-                <!--<TextBlock
-            FontSize ="15"
-            FontWeight ="Bold"
-             Margin ="20"
-            Foreground ="Black"
-            HorizontalAlignment ="Center"
-            VerticalAlignment ="Center"
-            Text="Hi , there"
-            >
-                </TextBlock>-->
-
-                <TextBox
-                    TextWrapping="Wrap"
-                     FontSize ="28"
-            FontWeight ="Bold"
-             Margin ="0,0,180,495"
-                  
-            Foreground ="Gold"
-                    Name="t1"
-            HorizontalAlignment ="Center"
-            VerticalAlignment ="Center"
-            Text="Hi , there" Height="Auto" Width="Auto"
-                    
-                    >
-                    <TextBox.Background>
-                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0" Opacity="0.5">
-                            <GradientStop Color="Black" Offset="0"/>
-                            <GradientStop Color="#FFC53232" Offset="1"/>
-                        </LinearGradientBrush>
-                    </TextBox.Background>
-                </TextBox>
-
-
+                </ListBox>
 
             </Border>
+
+
         </StackPanel>
+
+
 
         <TextBox
                     x:Name="t2"
-                     FontSize ="28"
+                     FontSize ="22"
             FontWeight ="Bold"
-             Margin ="0,504,86,0"
+             Margin ="0,511,121,0"
             Foreground ="Gold"
-                    
+                    BorderThickness="0"
             HorizontalAlignment ="Center"
             VerticalAlignment ="Center"
-            Text="" Height="66" Width="246" Grid.Row="2"
-                    
+            Text="" Height="59" Width="211" Grid.Row="2"
+                    KeyDown="t2_KeyDown"
+           
                     >
             <TextBox.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0" Opacity="0.5">
@@ -114,16 +97,17 @@
                 </LinearGradientBrush>
             </TextBox.Background>
         </TextBox>
-
-
-
-        <Button Margin="251,509,0,0" Grid.Row="2"
-                Content="Send"
-                FontSize="28"
-                Click="Button_Click"
-                >
-
-        </Button>
-
+        <Image Source="/Photos/send.png" 
+               Margin="271,509,0,0" Grid.Row="2"
+               MouseDown="SendBtn_Click"
+                x:Name="SendBtn"
+               >
+        </Image>
+        <Image Source="/Photos/attachment.png" 
+               Margin="216,509,61,4" Grid.Row="2"
+               MouseDown="Attach_MouseDown"
+                x:Name="Attach"
+               >
+        </Image>
     </Grid>
 </Window>
