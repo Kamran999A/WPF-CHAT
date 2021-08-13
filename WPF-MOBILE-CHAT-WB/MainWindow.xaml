@@ -78,6 +78,7 @@
 
 
         <TextBox
+                   CaretBrush="Gold"
                     x:Name="t2"
                      FontSize ="22"
             FontWeight ="Bold"
