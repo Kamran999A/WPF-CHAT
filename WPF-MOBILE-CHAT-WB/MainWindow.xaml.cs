@@ -74,7 +74,7 @@ namespace WPF_MOBILE_CHAT_WB
                 {
                     new ColumnDefinition()
                     {
-                        Width = new GridLength(60),
+                        Width = new GridLength(50),
                     },
                     new ColumnDefinition()
                     {
